@@ -93,8 +93,8 @@
 \def\scaption#1{\caption{\small\color{gray}#1}}
 \def\scaptionx#1#2{\caption[#1]{\small\color{gray}#2}}
 
-%\newcommand{\np}{\clearpage\newpage}
-\newcommand{\np}{\clearpage\setcounter{page}{1}\newpage}
+\newcommand{\np}{\clearpage\newpage}
+%\newcommand{\np}{\clearpage\setcounter{page}{1}\newpage}
 %\newcommand{\np}{}\newcommand{\minput}[1]{\input{#1}}
 
 \newcommand{\exercise}[2][]{\ifthenelse{\isempty{#1}}
@@ -109,7 +109,7 @@
 \makeatletter
 \@addtoreset{equation}{subsection}
 \renewcommand{\theequation}{\arabic{section}.\arabic{subsection}.\arabic{equation}}
-\renewcommand{\thepage}{\arabic{section}.\arabic{page}}
+%\renewcommand{\thepage}{\arabic{section}.\arabic{page}}
 %\@addtoreset{page}{section}
 \makeatother
 
