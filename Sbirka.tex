@@ -29,6 +29,8 @@
 \usepackage{csquotes}
 \usepackage{expl3}						%% Jinak nefunguje biblatex
 \usepackage{biblatex}
+\usepackage[version=4]{mhchem}
+
 \addbibresource{S:/Fyzika/Bibliography/References.bib}
 
 %\bibliographystyle{phaip}
@@ -121,11 +123,20 @@
 \pdfbookmark{\contentsname}{Contents}
 \tableofcontents\np
 
+\section*{Literatura}
+\begin{itemize}
+	\item Arthur Beiser, {\it Úvod do moderní fyziky} (Academia Praha, 1975) - přeloženo z anglického originálu {\it Perspectives of Modern Physics} (McGraw-Hill, New York, 1969).
+	
+	\item Paul Ewart, {\it Atomic Physics} (Morgan \& Claypool Publishers, 2019).
+\end{itemize}
+
 \input{CerneTeleso}\np
 \input{Compton}\np
 \input{GZK}\np
 \input{Rozptyl}\np
 \input{Vodik}\np
+\input{Atomy}\np
+\input{Molekuly}\np
 
 \printindex
 
