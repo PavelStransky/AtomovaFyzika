@@ -2,26 +2,90 @@
 
 \subsection{Vzorce}
 \begin{itemize}
-`  \item \emph{Planckův vyzařovací zákon ve frekvencích} $\nu$
+    \item Planckův vyzařovací zákon ve frekvencích $\nu$
         \begin{equation}
-            \rho(\nu,T)\d\nu=\frac{8\pi h}{c^{3}}\frac{\nu^{3}\d\nu}{\e^{\frac{h\nu}{k_{B}T}}-1}
+            \rho(\nu,T)\d\nu=\frac{8\pi h}{c^{3}}\frac{1}{\e^{\frac{h\nu}{k_{B}T}}-1}\nu^{3}\d\nu
         \end{equation}
 
-`  \item \emph{Planckův vyzařovací zákon ve vlnových délkách} $\lambda$
+    \item Planckův vyzařovací zákon ve vlnových délkách $\lambda$
         \begin{equation}
-            \rho(\lambda,T)\d\nu=\frac{8\pi h}{c^{3}}\frac{\nu^{3}\d\nu}{\e^{\frac{h\nu}{k_{B}T}}-1}
+            \rho(\lambda,T)\d\lambda=8\pi h c\frac{1}{\e^{\frac{h c}{\lambda k_{B}T}}-1}\frac{\d\lambda}{\lambda^{5}}
         \end{equation}
 
-    \item \emph{Konstanta jemné struktury}
+    \item Wienův posunovací zákon
+        \begin{align}
+            \lambda_{\mathrm{max}}&=\frac{\alpha}{T}&\alpha&\approx 2\c90\cdot10^{-3}\unit{mK}\\
+            \nu_{\mathrm{max}}&=\beta\,T & \beta&\approx 5\c83\cdot 10^{10}\unit{K^{-1}s^{-1}}
+        \end{align}
+
+    \item Stefanův-Boltzmannův zákon
+        \begin{align}
+            M&=\sigma T^{4} & \sigma&=\frac{2\pi^{5}k_{B}^{4}}{15h^{3}c^{2}}\approx 5\c67\cdot10^{-8}\unit{Wm^{-2}K^{-4}}
+        \end{align}
+
+    \item Comptonův rozptyl
+        \begin{align}
+            \lambda'-\lambda&=\lambda_{c}\left(1-\cos\theta\right) & \lambda_{c}&=\frac{h}{m_{e}c}
+        \end{align}
+
+    \item Rutherfordův rozptyl částice s nábojem $ze$ a kinetickou energií $T$ na jádře s nábojem $Ze$
+        \begin{align}
+            b&=\frac{d_{0}}{2}\frac{1}{\tg{\frac{\theta}{2}}} & d_{0}&=\frac{Zze^{2}}{4\pi\epsilon_{0}}\frac{1}{T}\\
+            \derivative{\sigma}{\theta}&=\left(\frac{d_{0}}{4}\right)^{2}\frac{1}{\sin^{4}{\frac{\theta}{2}}}
+        \end{align}
+
+    \item Spektrum vodíkupodobného atomu s centrálním nábojem $Ze$ a obíhající částicí hmotnosti $m$
         \begin{equation}
-            \alpha
+            E_{n}=R_{\infty}\frac{m}{m_{e}}Z^{2}\frac{1}{n^{2}}
         \end{equation}
+
 \end{itemize}
 
 \subsection{Konstanty}
 \begin{itemize}
-    \item \emph{Boltzmannova konstanta}
+    \item Planckova konstanta
+        \begin{align}
+            h&=6\c63\cdot 10^{-34}\unit{Js}\\
+            \hbar&\equiv\frac{h}{2\pi}=1\c05\cdot 10^{-34}\unit{Js}.
+        \end{align}
+
+    \item Rychlost světla ve vakuu
         \begin{equation}
-            k_{B}=1\c38\cdot10^{-23}\unit{\frac{J}{K}}.
+            c\approx 3\c00\cdot 10^{8}\unit{ms^{-1}}
+        \end{equation}
+    
+    \item Hmotnost elektronu
+        \begin{equation}
+            m_{e}\approx 9.11\cdot 10^{-31}\unit{kg}\approx 511\unit{keV}
+        \end{equation}
+
+    \item Elementární náboj
+        \begin{equation}
+            e\approx 1.60\cdot 10^{-19}\unit{C}
+        \end{equation}
+
+    \item Konstanta jemné struktury
+        \begin{equation}
+            \alpha=\frac{e^{2}}{4\pi\epsilon_{0}}\frac{1}{\hbar c}\approx\frac{1}{137}
+        \end{equation}
+
+    \item Rydbergova konstanta
+        \begin{equation}
+            R_{\infty}=\left(\frac{e^{2}}{4\pi\epsilon_{0}}\right)\frac{m_{e}}{2h^{2}}=hc\frac{\alpha^{2}}{2\lambda_{c}}\approx 13\c6\unit{eV}
+        \end{equation}
+
+    \item Bohrův poloměr
+        \begin{equation}
+            a_{0}=\frac{4\pi\epsilon}{e^{2}}\frac{\hbar^{2}}{m_{e}}=\frac{\lambda_{c}}{\alpha}\approx5\c3\cdot10^{-11}\unit{m}
+        \end{equation}
+
+    \item Boltzmannova konstanta
+        \begin{equation}
+            k_{B}=1\c38\cdot10^{-23}\unit{\frac{J}{K}}
+        \end{equation}
+
+    \item Termodynamická teplota
+        \begin{equation}
+            T(0\unit{^{\circ}C})=273\c15\unit{K}
         \end{equation}
 \end{itemize}
