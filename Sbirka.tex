@@ -143,6 +143,85 @@
 \input{Provazanost}\np
 \input{Vzorecky}\np
 
+\begin{homework}
+\exercise[9.10.2023]{Žárovka}
+	\begin{enumerate}
+		\item
+			Odhadněte délku a poloměr wolframového vlákna žárovky s příkonem $P=100\unit{W}$ zapojené v~české elektrické síti, víte-li, že teplota svítícího vlákna je $T=2700\unit{K}$ a měrný elektrický odpor wolframu při teplotě $t=20\unit{^{o}C}$ je $\rho_{0}=5\c6\cdot10^{-8}\,\Omega\unit{m}$.
+			Předpokládejte, že odpor vlákna závisí lineárně na teplotě,
+			\begin{equation*}
+				R=R_{0}(1+\alpha\Delta t),
+			\end{equation*}
+			kde $\alpha=4\c5\cdot10^{-3}\unit{K^{-1}}$ je teplotní součinitel elektrického odporu pro wolfram a $\Delta t$ je rozdíl teplot.
+
+		\item
+		    Jaké procento energie vyzařované vláknem je ve viditelné části spektra mezi vlnovými délkami $\lambda\in[380\unit{nm},750\unit{nm}]$?
+			Kam se \uv{ztratí} zbývající část vyzařované energie?
+	\end{enumerate}
+
+	\newpage
+\end{homework}
+
+\begin{homework}
+	\exercise[16.10.2023]{Elektron při Comptonově rozptylu}
+		Odvoďte vztah pro úhel $\varphi$, pod kterým vylétá elektron $e^{-}$ po Comptonově rozptylu, a vyjádřete ho pomocí vlnových délek nalétávajícího a rozptýleného fotonu $\lambda,\lambda'$ a Comptonovy vlnové délky $\lambda_{C}=h/(m_{e}c)$.
+		\begin{center}
+			\includegraphics[width=0.8\linewidth]{Compton.png}
+		\end{center}
+
+		\emph{Nápověda:} Vyjděte ze zákona zachování hybnosti ve směru nalétávajícího fotonu $\gamma$ a ve směru kolmém.
+		\newpage
+	\end{homework}
+	
+\begin{homework}
+	\setcounter{figure}{0}
+	\exercise[23.10.2023]{Polovodičový detektor $\gamma$ záření}
+	K detekci ionizujícího záření se používají polovodičové detektory.
+	Budeme předpokládat, že na detektor dopadá monochromatické záření s energií kvant $E_{\gamma}$ vzniklé rozpadem radioaktivního nuklidu.
+	Vysokoenergetické fotony interagují s elektrony polovodičového krystalu a předávají jim kinetickou energii $T$, což vytváří v detektoru elektrické impulsy, který se následně zesílí a změří.
+	Výsledkem měření je graf zobrazený na obrázku~\ref{fig:ComptonSpectrum}, kde na vodorovné ose je kinetická energie $T$ rozptýlených elektronů a na svislé ose četnost, se kterou byla tato energie naměřena při velkém počtu opakování měření.
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{ComptonSpectrum.png}
+		\caption{Detekované spektrum monochromatického $\gamma$ záření polovodičovým detektorem.}
+		\label{fig:ComptonSpectrum}
+	\end{figure}        
+
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[width=0.9\linewidth]{ComptonDetector.png}
+		\caption{Comptonův rozptyl. (a) Uvnitř detektoru. (b) Primární rozptyl vně detektoru, sekundární rozptyl uvnitř detektoru.}
+		\label{fig:ComptonDetector}
+	\end{figure}        
+
+	Jeden z procesů je Comptonův rozptyl, schematicky znázorněný na obrázku~\ref{fig:ComptonSpectrum}.	
+	\begin{enumerate}
+		\item Určete rozmezí energií $(T_{\mathrm{min}},T_{\mathrm{max}})$, které lze očekávat při Comptonově rozptylu fotonů s energií $E_{\gamma}$ uvnitř detektoru, přičemž rozptýlený foton vylétne z detektoru ven.
+		Proces je zobrazen na obrázku~\ref{fig:ComptonDetector}~(a).
+		Energie $T_{\mathrm{max}}$ ve změřeném spektru udává tzv. \emph{Comptonovu hranu}.
+
+		\item Ke Comptonově rozptylu fotonů může dojít i mimo detektor, což je znázorněno na obrázku~\ref{fig:ComptonDetector}~(b).
+		Do detektoru pak vlétají fotony s nižší energií.
+		Předpokládejte, že fotony rozptýlené o libovolný úhel vně detektoru se následně v detektoru rozptýlí vždy o úhel $\vartheta'=180^{\mathrm{o}}$ (pravděpodobnost zpětného rozptylu je vždy nejvyšší podle tzv. Kleinova-Nishinova zákona).
+		Určete, jaké rozmezí detekovaných energií $(T'_{\mathrm{min}},T'_{\mathrm{max}})$ lze očekávat v tomto případě.
+		Energie $T'_{\mathrm{min}}$ ve změřeném spektru udává tzv. \emph{pík zpětného odrazu}.
+
+		\item Identifikujte v obrázku~\ref{fig:ComptonSpectrum} Comptonovu hranu i pík zpětného odrazu a spočítejte z nich energii $E_{\gamma}$ nalétávajících fotonů.
+		Z tabulky na adrese \url{https://cds.cern.ch/record/1309915/files/978-3-642-02586-0_BookBackMatter.pdf} určete nuklid, jehož rozpad je měřen.
+
+		\item
+			Kromě Comptonova rozptylu dochází také k fotoefektu, při kterém je nalétávající foton zcela pohlcen.
+			Identifikujte v obrázku~\ref{fig:ComptonSpectrum} pík odpovídající fotoefektu a určete z něj energii detekovaných fotonů $E_{\gamma}$.
+			Předpokládejte, že ionizační energie elektronů je zanedbatelná vůči~$E_{\gamma}$.
+
+		\item
+		Při dostatečně vysoké energii záření $E_{\gamma}$ dochází v detektoru i ke vzniku elektron-pozitronového páru. Může k tomu jevu docházet i v případě měření z obrázku~\ref{fig:ComptonSpectrum}?
+	\end{enumerate}
+
+	\newpage
+\end{homework}
+
 \printindex
 
 %\bibliography{Z:/Share/Fyzika/Bibliography/References.bib}
