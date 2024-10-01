@@ -1,8 +1,15 @@
-\documentclass[a4paper,11pt,twoside]{article}
+%% !TeX program = xelatex
+%\documentclass[A5,17pt,UzkyOkraj,CislaStr,StylVet,openright]{velke}
 
-\usepackage{palatino,newtxmath,bbold}	%% Písma
-\usepackage{microtype}					%% Lepší mezery
+% Zakomentuj pro velké písmo
+\documentclass[a4paper,11pt,twoside]{article}
+\usepackage{palatino}
+\usepackage{newtxmath}
 \usepackage[T1]{fontenc}
+
+
+\usepackage{bbold}						%% Písma
+\usepackage{microtype}					%% Lepší mezery
 \usepackage[utf8]{inputenc}	            %% Kódování textu
 \usepackage[czech]{babel}               %% České nápisy
 \usepackage{amsfonts,amsmath}			%% Matematické symboly (amssymb koliduje s jiným balíkem)
@@ -55,7 +62,7 @@
 	filecolor=magenta
 }
 
-% Velikost stránky
+% Velikost stránky (zakomentuj pro velké písmo)
 \addtolength{\topmargin}{-1.5cm} %\addtolength{\textheight}{-10cm}
 \addtolength{\textwidth}{4cm} \addtolength{\textheight}{4cm} % Šířka a výška textu
 \addtolength{\voffset}{-0.5cm} % Horní okraj
@@ -144,218 +151,235 @@
 \input{Vzorecky}\np
 
 \begin{homework}
-\exercise[9.10.2023]{Žárovka}
+\exercise[15.10.2024]{Fotonová plachetnice}
+    Čtvercová plachta o rozměrech $d\times d$ se nachází ve vesmíru ve vzdálenosti $R$ od Slunce.
 	\begin{enumerate}
-		\item
-			Odhadněte délku a poloměr wolframového vlákna žárovky s příkonem $P=100\unit{W}$ zapojené v~české elektrické síti, víte-li, že teplota svítícího vlákna je $T=2700\unit{K}$ a měrný elektrický odpor wolframu při teplotě $t=20\unit{^{o}C}$ je $\rho_{0}=5\c6\cdot10^{-8}\,\Omega\unit{m}$.
-			Předpokládejte, že odpor vlákna závisí lineárně na teplotě,
-			\begin{equation*}
-				R=R_{0}(1+\alpha\Delta t),
-			\end{equation*}
-			kde $\alpha=4\c5\cdot10^{-3}\unit{K^{-1}}$ je teplotní součinitel elektrického odporu pro wolfram a $\Delta t$ je rozdíl teplot.
-
-		\item
-		    Jaké procento energie vyzařované vláknem je ve viditelné části spektra mezi vlnovými délkami $\lambda\in[380\unit{nm},750\unit{nm}]$?
-			Kam se \uv{ztratí} zbývající část vyzařované energie?
+		\item Určete, jaká síla bude na plachtu působit díky slunečnímu záření, víte-li, že zářivý výkon Slunce na povrchu Země je $I_{z}$.
+		\item Jak musí být plachta orientovaná, aby byla síla od záření co největší?
+		\item Je síla větší, když plachta záření pohltí, nebo když ho odrazí?
+		\item Zahrňte do výpočtu i gravitační sílu působící na plachtu. 
+			Předpokládejte, že plachta je vyrobena z hliníku (alobalu) o hustotě $\rho$.
+			Jakou musí mít tloušťku, aby tlak záření překonal gravitační sílu?
 	\end{enumerate}
-
-	\newpage
+	Řešte nejprve obecně, pak pro číselné hodnoty $\rho=2700\unit{kg\,m^{-3}}$, $d=100\unit{m}$, $I_z=1370\unit{W/m^{2}}$.
+	Využijte vztahu mezi energií a hybností fotonů $E=pc$.    
 \end{homework}
 
-\begin{homework}
-	\exercise[16.10.2023]{Elektron při Comptonově rozptylu}
-		Odvoďte vztah pro úhel $\varphi$, pod kterým vylétá elektron $e^{-}$ po Comptonově rozptylu, a vyjádřete ho pomocí vlnových délek nalétávajícího a rozptýleného fotonu $\lambda,\lambda'$ a Comptonovy vlnové délky $\lambda_{C}=h/(m_{e}c)$.
-		\begin{center}
-			\includegraphics[width=0.8\linewidth]{Compton.png}
-		\end{center}
+% \begin{homework}
+% \exercise[9.10.2023]{Žárovka}
+% 	\begin{enumerate}
+% 		\item
+% 			Odhadněte délku a poloměr wolframového vlákna žárovky s příkonem $P=100\unit{W}$ zapojené v~české elektrické síti, víte-li, že teplota svítícího vlákna je $T=2700\unit{K}$ a měrný elektrický odpor wolframu při teplotě $t=20\unit{^{o}C}$ je $\rho_{0}=5\c6\cdot10^{-8}\,\Omega\unit{m}$.
+% 			Předpokládejte, že odpor vlákna závisí lineárně na teplotě,
+% 			\begin{equation*}
+% 				R=R_{0}(1+\alpha\Delta t),
+% 			\end{equation*}
+% 			kde $\alpha=4\c5\cdot10^{-3}\unit{K^{-1}}$ je teplotní součinitel elektrického odporu pro wolfram a $\Delta t$ je rozdíl teplot.
 
-		\emph{Nápověda:} Vyjděte ze zákona zachování hybnosti ve směru nalétávajícího fotonu $\gamma$ a ve směru kolmém.
-		\newpage
-	\end{homework}
+% 		\item
+% 		    Jaké procento energie vyzařované vláknem je ve viditelné části spektra mezi vlnovými délkami $\lambda\in[380\unit{nm},750\unit{nm}]$?
+% 			Kam se \uv{ztratí} zbývající část vyzařované energie?
+% 	\end{enumerate}
+
+% 	\newpage
+% \end{homework}
+
+% \begin{homework}
+% 	\exercise[16.10.2023]{Elektron při Comptonově rozptylu}
+% 		Odvoďte vztah pro úhel $\varphi$, pod kterým vylétá elektron $e^{-}$ po Comptonově rozptylu, a vyjádřete ho pomocí vlnových délek nalétávajícího a rozptýleného fotonu $\lambda,\lambda'$ a Comptonovy vlnové délky $\lambda_{C}=h/(m_{e}c)$.
+% 		\begin{center}
+% 			\includegraphics[width=0.8\linewidth]{Compton.png}
+% 		\end{center}
+
+% 		\emph{Nápověda:} Vyjděte ze zákona zachování hybnosti ve směru nalétávajícího fotonu $\gamma$ a ve směru kolmém.
+% 		\newpage
+% 	\end{homework}
 	
-\begin{homework}
-	\setcounter{figure}{0}
-	\pagestyle{empty}
-	\exercise[23.10.2023]{Polovodičový detektor $\gamma$ záření}
-	K detekci ionizujícího záření se používají polovodičové detektory.
-	Budeme předpokládat, že na detektor dopadá monochromatické záření s energií kvant $E_{\gamma}$ vzniklé rozpadem radioaktivního nuklidu.
-	Vysokoenergetické fotony interagují s elektrony polovodičového krystalu a předávají jim kinetickou energii $T$, což vytváří v detektoru elektrické impulsy, který se následně zesílí a změří.
-	Výsledkem měření je graf zobrazený na obrázku~\ref{fig:ComptonSpectrum}, kde na vodorovné ose je kinetická energie $T$ rozptýlených elektronů a na svislé ose četnost, se kterou byla tato energie naměřena při velkém počtu opakování měření.
+% \begin{homework}
+% 	\setcounter{figure}{0}
+% 	\pagestyle{empty}
+% 	\exercise[23.10.2023]{Polovodičový detektor $\gamma$ záření}
+% 	K detekci ionizujícího záření se používají polovodičové detektory.
+% 	Budeme předpokládat, že na detektor dopadá monochromatické záření s energií kvant $E_{\gamma}$ vzniklé rozpadem radioaktivního nuklidu.
+% 	Vysokoenergetické fotony interagují s elektrony polovodičového krystalu a předávají jim kinetickou energii $T$, což vytváří v detektoru elektrické impulsy, který se následně zesílí a změří.
+% 	Výsledkem měření je graf zobrazený na obrázku~\ref{fig:ComptonSpectrum}, kde na vodorovné ose je kinetická energie $T$ rozptýlených elektronů a na svislé ose četnost, se kterou byla tato energie naměřena při velkém počtu opakování měření.
 
-	\begin{figure}[!h]
-		\centering
-		\includegraphics[width=0.5\linewidth]{ComptonSpectrum.png}
-		\caption{Detekované spektrum monochromatického $\gamma$ záření polovodičovým detektorem.}
-		\label{fig:ComptonSpectrum}
-	\end{figure}        
+% 	\begin{figure}[!h]
+% 		\centering
+% 		\includegraphics[width=0.5\linewidth]{ComptonSpectrum.png}
+% 		\caption{Detekované spektrum monochromatického $\gamma$ záření polovodičovým detektorem.}
+% 		\label{fig:ComptonSpectrum}
+% 	\end{figure}        
 
-	\begin{figure}[!h]
-		\centering
-		\includegraphics[width=0.9\linewidth]{ComptonDetector.png}
-		\caption{Comptonův rozptyl. (a) Uvnitř detektoru. (b) Primární rozptyl vně detektoru, sekundární rozptyl uvnitř detektoru.}
-		\label{fig:ComptonDetector}
-	\end{figure}        
+% 	\begin{figure}[!h]
+% 		\centering
+% 		\includegraphics[width=0.9\linewidth]{ComptonDetector.png}
+% 		\caption{Comptonův rozptyl. (a) Uvnitř detektoru. (b) Primární rozptyl vně detektoru, sekundární rozptyl uvnitř detektoru.}
+% 		\label{fig:ComptonDetector}
+% 	\end{figure}        
 
-	Jeden z procesů je Comptonův rozptyl, schematicky znázorněný na obrázku~\ref{fig:ComptonSpectrum}.	
-	\begin{enumerate}
-		\item Určete rozmezí energií $(T_{\mathrm{min}},T_{\mathrm{max}})$, které lze očekávat při Comptonově rozptylu fotonů s energií $E_{\gamma}$ uvnitř detektoru, přičemž rozptýlený foton vylétne z detektoru ven.
-		Proces je zobrazen na obrázku~\ref{fig:ComptonDetector}~(a).
-		Energie $T_{\mathrm{max}}$ ve změřeném spektru udává tzv. \emph{Comptonovu hranu}.
+% 	Jeden z procesů je Comptonův rozptyl, schematicky znázorněný na obrázku~\ref{fig:ComptonSpectrum}.	
+% 	\begin{enumerate}
+% 		\item Určete rozmezí energií $(T_{\mathrm{min}},T_{\mathrm{max}})$, které lze očekávat při Comptonově rozptylu fotonů s energií $E_{\gamma}$ uvnitř detektoru, přičemž rozptýlený foton vylétne z detektoru ven.
+% 		Proces je zobrazen na obrázku~\ref{fig:ComptonDetector}~(a).
+% 		Energie $T_{\mathrm{max}}$ ve změřeném spektru udává tzv. \emph{Comptonovu hranu}.
 
-		\item Ke Comptonově rozptylu fotonů může dojít i mimo detektor, což je znázorněno na obrázku~\ref{fig:ComptonDetector}~(b).
-		Do detektoru pak vlétají fotony s nižší energií.
-		Předpokládejte, že fotony rozptýlené o libovolný úhel vně detektoru se následně v detektoru rozptýlí vždy o úhel $\vartheta'=180^{\mathrm{o}}$ (pravděpodobnost zpětného rozptylu je vždy nejvyšší podle tzv. Kleinova-Nishinova zákona).
-		Určete, jaké rozmezí detekovaných energií $(T'_{\mathrm{min}},T'_{\mathrm{max}})$ lze očekávat v tomto případě.
-		Energie $T'_{\mathrm{min}}$ ve změřeném spektru udává tzv. \emph{pík zpětného odrazu}.
+% 		\item Ke Comptonově rozptylu fotonů může dojít i mimo detektor, což je znázorněno na obrázku~\ref{fig:ComptonDetector}~(b).
+% 		Do detektoru pak vlétají fotony s nižší energií.
+% 		Předpokládejte, že fotony rozptýlené o libovolný úhel vně detektoru se následně v detektoru rozptýlí vždy o úhel $\vartheta'=180^{\mathrm{o}}$ (pravděpodobnost zpětného rozptylu je vždy nejvyšší podle tzv. Kleinova-Nishinova zákona).
+% 		Určete, jaké rozmezí detekovaných energií $(T'_{\mathrm{min}},T'_{\mathrm{max}})$ lze očekávat v tomto případě.
+% 		Energie $T'_{\mathrm{min}}$ ve změřeném spektru udává tzv. \emph{pík zpětného odrazu}.
 
-		\item Identifikujte v obrázku~\ref{fig:ComptonSpectrum} Comptonovu hranu i pík zpětného odrazu a spočítejte z nich energii $E_{\gamma}$ nalétávajících fotonů.
-		Z tabulky na adrese \url{https://cds.cern.ch/record/1309915/files/978-3-642-02586-0_BookBackMatter.pdf} určete nuklid, jehož rozpad je měřen.
+% 		\item Identifikujte v obrázku~\ref{fig:ComptonSpectrum} Comptonovu hranu i pík zpětného odrazu a spočítejte z nich energii $E_{\gamma}$ nalétávajících fotonů.
+% 		Z tabulky na adrese \url{https://cds.cern.ch/record/1309915/files/978-3-642-02586-0_BookBackMatter.pdf} určete nuklid, jehož rozpad je měřen.
 
-		\item
-			Kromě Comptonova rozptylu dochází také k fotoefektu, při kterém je nalétávající foton zcela pohlcen.
-			Identifikujte v obrázku~\ref{fig:ComptonSpectrum} pík odpovídající fotoefektu a určete z něj energii detekovaných fotonů $E_{\gamma}$.
-			Předpokládejte, že ionizační energie elektronů je zanedbatelná vůči~$E_{\gamma}$.
+% 		\item
+% 			Kromě Comptonova rozptylu dochází také k fotoefektu, při kterém je nalétávající foton zcela pohlcen.
+% 			Identifikujte v obrázku~\ref{fig:ComptonSpectrum} pík odpovídající fotoefektu a určete z něj energii detekovaných fotonů $E_{\gamma}$.
+% 			Předpokládejte, že ionizační energie elektronů je zanedbatelná vůči~$E_{\gamma}$.
 
-		\item
-		Při dostatečně vysoké energii záření $E_{\gamma}$ dochází v detektoru i ke vzniku elektron-pozitronového páru. Může k tomu jevu docházet i v případě měření z obrázku~\ref{fig:ComptonSpectrum}?
-	\end{enumerate}
+% 		\item
+% 		Při dostatečně vysoké energii záření $E_{\gamma}$ dochází v detektoru i ke vzniku elektron-pozitronového páru. Může k tomu jevu docházet i v případě měření z obrázku~\ref{fig:ComptonSpectrum}?
+% 	\end{enumerate}
 
-	\newpage
-\end{homework}
+% 	\newpage
+% \end{homework}
 
-\begin{homework}
-	\exercise[30.10.2023]{Rutherfordův rozptyl}
-    Protony vylétávají z urychlovače s kinetickou energií $T=200\,\mathrm{MeV}$, dopadají na velmi tenkou hliníkovou fólii o tloušťce $t=100\unit{nm}$ a dochází k rozptylu.
-    Svazek má tok $\Phi=10^{9}$ protonů za sekundu.
-	Hustota hliníku je $\rho=2710\unit{kg}\unit{m^{-3}}$.
+% \begin{homework}
+% 	\exercise[30.10.2023]{Rutherfordův rozptyl}
+%     Protony vylétávají z urychlovače s kinetickou energií $T=200\,\mathrm{MeV}$, dopadají na velmi tenkou hliníkovou fólii o tloušťce $t=100\unit{nm}$ a dochází k rozptylu.
+%     Svazek má tok $\Phi=10^{9}$ protonů za sekundu.
+% 	Hustota hliníku je $\rho=2710\unit{kg}\unit{m^{-3}}$.
 
-    \begin{itemize}
-        \item Určete diferenciální účinný průřez Rutherfordova rozptylu protonů na úhel $\theta=30^{\mathrm{o}}$.
-        \item Spočítejte celkový účinný průřez na úhly větší než $\theta_0=90^{\mathrm{o}}$.
-        \item Vyjádřete tloušťku fólie v počtu atomů hliníku.
-        \item Kolik protonů za sekundu se rozptýlí na úhly větší než $\theta_0$?
-    \end{itemize}
+%     \begin{itemize}
+%         \item Určete diferenciální účinný průřez Rutherfordova rozptylu protonů na úhel $\theta=30^{\mathrm{o}}$.
+%         \item Spočítejte celkový účinný průřez na úhly větší než $\theta_0=90^{\mathrm{o}}$.
+%         \item Vyjádřete tloušťku fólie v počtu atomů hliníku.
+%         \item Kolik protonů za sekundu se rozptýlí na úhly větší než $\theta_0$?
+%     \end{itemize}
 
-\newpage
-\end{homework}
+% \newpage
+% \end{homework}
 	
-\begin{homework}
-	\exercise[6.11.2023]{Klasický model vodíku}
-	\begin{itemize}
-		\item     
-			Spočítejte frekvenci kruhového pohybu elektronu v klasickém modelu vodíkového atomu (elektron se nachází ve vzdálenosti Bohrova poloměru $a_{0}$ od atomového jádra).
-			Výsledný vztah vyjádřete pomocí konstanty jemné struktury $\alpha$.
-		\item
-			Pokud by elektron vyzařoval elektromagnetické záření o této frekvenci, jaké by mělo vlnovou délku a v jaké oblasti spektra by se nacházelo?
-		\item
-			Jak daleko od protonu by elektron musel být, aby obíhal s frekvencí $f=1\unit{s^{-1}}$?
-	\end{itemize}
+% \begin{homework}
+% 	\exercise[6.11.2023]{Klasický model vodíku}
+% 	\begin{itemize}
+% 		\item     
+% 			Spočítejte frekvenci kruhového pohybu elektronu v klasickém modelu vodíkového atomu (elektron se nachází ve vzdálenosti Bohrova poloměru $a_{0}$ od atomového jádra).
+% 			Výsledný vztah vyjádřete pomocí konstanty jemné struktury $\alpha$.
+% 		\item
+% 			Pokud by elektron vyzařoval elektromagnetické záření o této frekvenci, jaké by mělo vlnovou délku a v jaké oblasti spektra by se nacházelo?
+% 		\item
+% 			Jak daleko od protonu by elektron musel být, aby obíhal s frekvencí $f=1\unit{s^{-1}}$?
+% 	\end{itemize}
 
-\newpage
-\end{homework}
+% \newpage
+% \end{homework}
 
-\begin{homework}
-	\exercise{Rozměr vzbuzeného vodíku}
-		Vodík se nachází ve vzbuzeném $2s$ stavu.
-		Jeho radiální část vlnové funkce je tedy
-		\begin{equation*}
-			R_{20}(r)=2\left(\frac{1}{2a_{0}}\right)^{\frac{3}{2}}\left(1-\frac{r}{2a_{0}}\right)\e^{-\frac{r}{2a_0}}.
-		\end{equation*}
+% \begin{homework}
+% 	\exercise{Rozměr vzbuzeného vodíku}
+% 		Vodík se nachází ve vzbuzeném $2s$ stavu.
+% 		Jeho radiální část vlnové funkce je tedy
+% 		\begin{equation*}
+% 			R_{20}(r)=2\left(\frac{1}{2a_{0}}\right)^{\frac{3}{2}}\left(1-\frac{r}{2a_{0}}\right)\e^{-\frac{r}{2a_0}}.
+% 		\end{equation*}
 
-		\begin{enumerate}
-			\item
-				Nalezněte vzdálenost $r_{p}$ od jádra, na které naměříte elektron s největší pravděpodobností.
-			\item
-				Určete střední poloměr atomu (střední hodnotu vzdálenost $\langle r\rangle$ od jádra, na které naměříte elektron).
-			\item
-				Jak se změní měřený rozměr atomu, pokud se vodík bude nacházet ve $2p$ stavu, jehož radiální část vlnové funkce zní
-				\begin{equation*}
-					R_{21}(r)=\frac{1}{\sqrt{3}}\left(\frac{1}{2a_{0}}\right)^{\frac{3}{2}}\frac{r}{a_{0}}\e^{-\frac{r}{2a_{0}}}?
-				\end{equation*}
-			\item
-				Jaká bude vlnová délka vyzářeného fotonu, když elektron spadne do základního stavu?
-				Bude možné tento přechod pozorovat pouhým okem?
-		\end{enumerate}
+% 		\begin{enumerate}
+% 			\item
+% 				Nalezněte vzdálenost $r_{p}$ od jádra, na které naměříte elektron s největší pravděpodobností.
+% 			\item
+% 				Určete střední poloměr atomu (střední hodnotu vzdálenost $\langle r\rangle$ od jádra, na které naměříte elektron).
+% 			\item
+% 				Jak se změní měřený rozměr atomu, pokud se vodík bude nacházet ve $2p$ stavu, jehož radiální část vlnové funkce zní
+% 				\begin{equation*}
+% 					R_{21}(r)=\frac{1}{\sqrt{3}}\left(\frac{1}{2a_{0}}\right)^{\frac{3}{2}}\frac{r}{a_{0}}\e^{-\frac{r}{2a_{0}}}?
+% 				\end{equation*}
+% 			\item
+% 				Jaká bude vlnová délka vyzářeného fotonu, když elektron spadne do základního stavu?
+% 				Bude možné tento přechod pozorovat pouhým okem?
+% 		\end{enumerate}
 
-		\newpage
-\end{homework}
+% 		\newpage
+% \end{homework}
 
-\begin{homework}
-	\exercise{Pálení uhlí}
-		Černé uhlí je tvořeno z převážné části uhlíkem. Spálením $M=1\unit{kg}$ uhlíku se uvolní $Q=33\unit{MJ}$ energie ve formě tepla.
-		\begin{enumerate}
-			\item 
-				Jaká hmotnost oxidu uhličitého $\ce{CO2}$ vznikne spálením $M=1\unit{kg}$ uhlíku, tj. při reakci
-				\begin{equation*}
-					\ce{C + O2 -> CO2}?
-				\end{equation*}
+% \begin{homework}
+% 	\exercise{Pálení uhlí}
+% 		Černé uhlí je tvořeno z převážné části uhlíkem. Spálením $M=1\unit{kg}$ uhlíku se uvolní $Q=33\unit{MJ}$ energie ve formě tepla.
+% 		\begin{enumerate}
+% 			\item 
+% 				Jaká hmotnost oxidu uhličitého $\ce{CO2}$ vznikne spálením $M=1\unit{kg}$ uhlíku, tj. při reakci
+% 				\begin{equation*}
+% 					\ce{C + O2 -> CO2}?
+% 				\end{equation*}
 
-			\item
-				Kolik litrů vody ohřejete z pokojové teploty na teplotu varu spálením $M=1\unit{kg}$ uhlíku za předpokladu, že se veškerá energie vzniklá hořením uhlíku využije na ohřev vody?
+% 			\item
+% 				Kolik litrů vody ohřejete z pokojové teploty na teplotu varu spálením $M=1\unit{kg}$ uhlíku za předpokladu, že se veškerá energie vzniklá hořením uhlíku využije na ohřev vody?
 
-			\item
-				Důsledkem relativistické relace mezi energií a hmotností $E=mc^{2}$, kde $c$ je rychlost světla, se bude hmotnost vzniklého $\ce{CO2}$ lišit od hmotnosti reaktantů $\ce{C}$ a $\ce{O2}$.
-				Jak velký bude tento rozdíl?
+% 			\item
+% 				Důsledkem relativistické relace mezi energií a hmotností $E=mc^{2}$, kde $c$ je rychlost světla, se bude hmotnost vzniklého $\ce{CO2}$ lišit od hmotnosti reaktantů $\ce{C}$ a $\ce{O2}$.
+% 				Jak velký bude tento rozdíl?
 
-				Tepelná elektrárna spálí $10$ tun uhlí za minutu.
-				Kolik let musí elektrárna běžet, aby byl tento relativistický rozdíl $m=1\unit{kg}$?
-				Předpokládejte, že pálené uhlí je tvořeno pouze uhlíkem.
-		\end{enumerate}
+% 				Tepelná elektrárna spálí $10$ tun uhlí za minutu.
+% 				Kolik let musí elektrárna běžet, aby byl tento relativistický rozdíl $m=1\unit{kg}$?
+% 				Předpokládejte, že pálené uhlí je tvořeno pouze uhlíkem.
+% 		\end{enumerate}
 
-		\newpage
-\end{homework}
+% 		\newpage
+% \end{homework}
 
-\begin{homework}
-	\exercise{Zhroucení Slunce}
-		Předpokládejte, že naše Slunce se po vyhoření zhroutí a vznikne z něj bílý trpaslík tvořený pouze uhlíkem $^{12}\mathrm{C}$.  
-		Předpokládejte, že hustota trpaslíka je konstantní.
+% \begin{homework}
+% 	\exercise{Zhroucení Slunce}
+% 		Předpokládejte, že naše Slunce se po vyhoření zhroutí a vznikne z něj bílý trpaslík tvořený pouze uhlíkem $^{12}\mathrm{C}$.  
+% 		Předpokládejte, že hustota trpaslíka je konstantní.
 
-		\begin{enumerate}
-			\item Spočítejte Fermiho energii $E_{F}$ nerelativistického elektronového degenerovaného plynu a Fermiho rychlost $v_{F}$ danou vztahem
-			\begin{equation*}
-				E_{F}=\frac{1}{2}m_{e}v_{F}^{2}.
-			\end{equation*}
-			Vyjádřete Fermiho rychlost v násobcích rychlosti světla.
-			Je nerelativistická aproximace oprávněná?
+% 		\begin{enumerate}
+% 			\item Spočítejte Fermiho energii $E_{F}$ nerelativistického elektronového degenerovaného plynu a Fermiho rychlost $v_{F}$ danou vztahem
+% 			\begin{equation*}
+% 				E_{F}=\frac{1}{2}m_{e}v_{F}^{2}.
+% 			\end{equation*}
+% 			Vyjádřete Fermiho rychlost v násobcích rychlosti světla.
+% 			Je nerelativistická aproximace oprávněná?
 			
-			\item Na základě uvedených předpokladů určete poloměr vzniklého bílého trpaslíka.
+% 			\item Na základě uvedených předpokladů určete poloměr vzniklého bílého trpaslíka.
 
-			\item Předpokládejte, že degenerovaný elektronový plyn je ultrarelativistický a určete Chandrasekharovu mez.
-				Najděte její číselnou hodnotu vyjádřenou v násobcích hmotnosti Slunce.
+% 			\item Předpokládejte, že degenerovaný elektronový plyn je ultrarelativistický a určete Chandrasekharovu mez.
+% 				Najděte její číselnou hodnotu vyjádřenou v násobcích hmotnosti Slunce.
 			
-			\item Je-li hvězda těžší, než kolik udává Chandrasekharova mez, dojde k jejímu dalšímu zhroucení a vznikne neutronová hvězda.
-			Spočítejte mezní hmotnost pro sférickou hvězdu o konstantní hustotě tvořenou degenerovaným neutronovým plynem (nazývá se Tolmanova-Oppenheimerova-Volkoffova mez) a vyjádřete ji v násobcích hmotnosti Slunce.
-		\end{enumerate}
+% 			\item Je-li hvězda těžší, než kolik udává Chandrasekharova mez, dojde k jejímu dalšímu zhroucení a vznikne neutronová hvězda.
+% 			Spočítejte mezní hmotnost pro sférickou hvězdu o konstantní hustotě tvořenou degenerovaným neutronovým plynem (nazývá se Tolmanova-Oppenheimerova-Volkoffova mez) a vyjádřete ji v násobcích hmotnosti Slunce.
+% 		\end{enumerate}
 
-		{\it Poznámka:} Předpoklad konstantní hustoty je velmi hrubý. 
-		Po započtení hustoty správně rostoucí s hloubkou pod povrchem a dalších korekcí vycházejí obě meze nižší.
+% 		{\it Poznámka:} Předpoklad konstantní hustoty je velmi hrubý. 
+% 		Po započtení hustoty správně rostoucí s hloubkou pod povrchem a dalších korekcí vycházejí obě meze nižší.
 
-		\newpage
-\end{homework}
+% 		\newpage
+% \end{homework}
 
-\begin{homework}
-	\exercise{Kvantové provázání a teleportace}
-	\begin{enumerate}
-		\item 
-		Rozhodněte, zda stav dvou qubitů
-		\begin{equation*}
-			\ket{\Phi}=\mathcal{N}\left(2\ket{\uparrow\uparrow}+\im\ket{\downarrow\uparrow}+4\im\ket{\uparrow\downarrow}-2\ket{\downarrow\downarrow}\right)
-		\end{equation*}
-		je provázaný, a svou odpověď zdůvodněte. 
-		Nalezněte normalizační faktor $\mathcal{N}$.
+% \begin{homework}
+% 	\exercise{Kvantové provázání a teleportace}
+% 	\begin{enumerate}
+% 		\item 
+% 		Rozhodněte, zda stav dvou qubitů
+% 		\begin{equation*}
+% 			\ket{\Phi}=\mathcal{N}\left(2\ket{\uparrow\uparrow}+\im\ket{\downarrow\uparrow}+4\im\ket{\uparrow\downarrow}-2\ket{\downarrow\downarrow}\right)
+% 		\end{equation*}
+% 		je provázaný, a svou odpověď zdůvodněte. 
+% 		Nalezněte normalizační faktor $\mathcal{N}$.
 
-		\item
-		Bude kvantová teleportace qubitu v obecném stavu $\ket{\psi}\alpha\ket{\uparrow}+\beta\ket{\downarrow}$ od Alice k Bobovi fungovat i v případě, že Alice a Bob budou mít k dispozici provázaný Bellův stav
-		\begin{equation*}
-			\ket{\Phi_{2}}=\frac{1}{\sqrt{2}}\left[\ket{\uparrow\downarrow}+\ket{\downarrow\uparrow}\right]?
-		\end{equation*}
-		Pokud ano, jako transformaci musí provést Bob na základě klasické informace získané od Alice, aby získal stav identický s tím, který Alice odesílala?
-	\end{enumerate}
+% 		\item
+% 		Bude kvantová teleportace qubitu v obecném stavu $\ket{\psi}=\alpha\ket{\uparrow}+\beta\ket{\downarrow}$ od Alice k Bobovi fungovat i v případě, že Alice a Bob budou mít k dispozici provázaný Bellův stav
+% 		\begin{equation*}
+% 			\ket{\Psi^{+}}=\frac{1}{\sqrt{2}}\left[\ket{\uparrow\downarrow}+\ket{\downarrow\uparrow}\right]?
+% 		\end{equation*}
+% 		Pokud ano, jako transformaci musí provést Bob na základě klasické informace získané od Alice, aby získal stav identický s tím, který Alice odesílala?
+% 	\end{enumerate}
 
-	V zápisu stavů je použito zjednodušeného značení $\ket{\uparrow\downarrow}\equiv\ket{\uparrow}_{1}\otimes\ket{\downarrow}_{2}$ (analogicky i pro ostatní kombinace spinu nahoru a dolů a pro ostatní kombinace podsystémů).
+% 	V zápisu stavů je použito zjednodušeného značení $\ket{\uparrow\downarrow}\equiv\ket{\uparrow}_{1}\ket{\downarrow}_{2}$ (analogicky i pro ostatní kombinace spinu nahoru a dolů a pro ostatní kombinace podsystémů).
 
-	\newpage
-\end{homework}
+% 	\newpage
+% \end{homework}
+
+\np
 
 \printindex
 
